@@ -1,0 +1,16 @@
+%button {
+    // background-color: var(--first);
+    background-color: var(--second);
+    border-radius: var(--lg);
+    border-color: var(--second);
+    border-style: solid;
+    border-width: 0.1rem;
+    color: var(--text-alt);
+    padding: var(--xs) var(--sm);
+    width: 100%;
+}
+
+%button-ghost {
+    background-color: transparent;
+    border-color: currentColor;
+}

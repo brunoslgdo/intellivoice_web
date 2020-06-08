@@ -1,0 +1,31 @@
+.socials {
+    list-style: none;
+
+    &__item {
+        display: inline-block;
+        margin-right:  var(--xs);
+
+        @media only screen and (min-width: 768px) {
+
+            &:first-child {
+                display: none;
+            }
+        }
+
+        &:nth-child(1n + 2) {
+            display: none;
+            
+            @media only screen and (min-width: 768px) {
+                display: inline-block;
+            }
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__icon {
+        width: var(--xl);
+    }
+}

@@ -1,0 +1,15 @@
+html {
+    background-color: var(--second);
+    box-sizing: border-box;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: normal;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    // font-family: 'Lato', sans-serif;
+    font-family: 'museo_sans300';
+    margin: 0;
+    padding: 0;
+}

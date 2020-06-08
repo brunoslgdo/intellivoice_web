@@ -1,0 +1,96 @@
+.form-contact {
+    color: var(--text-alt);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sm);
+    width: 100%;
+
+    * {
+        font-size: var(--sm);
+    }
+
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+        font-size: var(--lg);
+        margin-bottom: var(--md);
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        @media only screen and (min-width: 568px) {
+
+            &:nth-child(3) {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            
+            &:nth-child(4) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            }
+        }
+    }
+
+    &__label {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: var(--xs);
+    }
+
+
+    &__input {
+        @extend %button;
+        position: relative;
+        transition: color 0.3s ease-in-out,
+                    border-color 0.3s ease-in-out,
+                    box-shadow 0.3s ease-in-out;
+
+        &:focus {
+            color: var(--second);
+            border-color: var(--second);
+            box-shadow: 0 0 0.1rem var(--second);
+            outline: none;
+        }
+    }
+
+    &__label {
+        transition: color 0.3s ease-in-out,
+                    border-color 0.3s ease-in-out,
+                    text-shadow 0.3s ease-in-out;
+    }
+
+    &__input:focus + &__label {
+        color: var(--second);
+        border-color: var(--second);
+        text-shadow: 0 0 0.1rem var(--second);
+    }
+
+    &__textarea {
+        border-radius: var(--md);
+        padding-top: var(--sm);
+        padding-bottom: var(--sm);
+        height: 16rem;
+        resize: none;
+    }
+
+    &__input:placeholder-shown,
+    &__input::placeholder {
+        color: rgba(255,255,255, 0.8);
+    }
+
+    .button {
+        cursor: pointer;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}

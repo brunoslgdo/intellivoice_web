@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="control-cache", content="no-cache")
+        title Intellivoice
+        link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap", rel="stylesheet")
+        link(href="../css/fonts.css", rel="stylesheet")
+        link(href="../css/forms.css", rel="stylesheet")
+        link(href="../css/styles.css", rel="stylesheet")
+    body
+
+        .landing
+            .landing__wrap
+                img(src="../img/logo-intellivoice.svg", class="landing__logo", alt="intellivoice")
+                h1.landing__display Comunicaciones eficientes
+                ul.socials
+                    li.socials__item: a(href="#", class="socials__link", taget="_blank"): img(src="../img/icon-down-arrow.svg", class="socials__icon", alt="da clic para ir al formulario")
+                    li.socials__item: a(href="#", class="socials__link", taget="_blank"): img(src="../img/icon-linkedin.svg", class="socials__icon", alt="intellivoice linkedin")
+                    li.socials__item: a(href="#", class="socials__link", taget="_blank"): img(src="../img/icon-facebook.svg", class="socials__icon", alt="intellovoice facebook")
+            .landing__wrap
+                .landing__form-header
+                    img(src="../img/icon-iv.svg", class="landing__form-icon", alt="icon contacto")
+                    h2.landing__form-title Contáctanos
+                    a(href="mailto:intellivoice@correo.com", class="landing__form-data") intellivoice@correo.com
+                    a(href="tel:55123456789", class="landing__form-data") 55123456789
+                include ../components/form-contact
+        
+        script(src="../js/validator.js")
+        script.
+            new Validator(document.querySelector('#form-contact'), function (err, res) {
+                return res;
+            });

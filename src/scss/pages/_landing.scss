@@ -1,0 +1,123 @@
+.landing {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    @media only screen and (min-width: 768px) {
+        grid-template-rows: 3fr 4fr;
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: 1fr 40rem;
+        grid-template-rows: auto;
+    }
+    
+    @media only screen and (min-width: 1366px) {
+        grid-template-columns: 1fr 56rem;
+    }
+
+    &__wrap {
+        @extend .__wrap;
+        padding-top: var(--md);
+        padding-bottom: var(--md);
+        min-height: 100vh;
+
+        @media only screen and (min-width: 768px) {
+            // min-height: initial;
+        }
+    }
+
+    &__wrap:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url('../img/bg.png');
+        background-size: cover;
+
+        @media only screen and (min-width: 768px) {
+            padding-top: 4.8rem;
+            padding-bottom: 4.8rem;   
+        }
+    }
+
+    &__wrap:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--first);
+        // background-color: var(--second);
+    
+        @media only screen and (min-width: 1024px) {
+            padding-right: var(--lg);
+            padding-left: var(--lg);
+        }
+    }
+
+    &__logo {
+        height: var(--lg);
+    }
+
+    &__display {
+        color: var(--text-alt);
+        font-family: 'museo_sans700';
+        font-size: var(--lg);
+        text-align: center;
+        text-shadow: 0 0 0.4rem var(--second);
+        // -webkit-text-stroke: 0.2rem rgba(28, 172, 198, 0.4);
+        // -webkit-text-stroke: 0.2rem rgba(26, 26, 26, 0.2);
+        
+        @media only screen and (min-width: 568px) {
+            font-size: 4.8rem;
+        }
+        
+        @media only screen and (min-width: 1024px) {
+            font-size: 6.4rem;
+        }
+        
+        @media only screen and (min-width: 1366px) {
+            font-size: 8rem;
+        }
+    }
+
+    &__form-header {
+        align-self: flex-start;
+        display: grid;
+        grid-template-columns: var(--lg) auto;
+        grid-template-rows: auto;
+    }
+
+    &__form-icon {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        align-self: center;
+    }
+
+    &__form-title {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        color: var(--text-alt);
+        font-size: var(--xl);
+    }
+
+    &__form-data {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        color: var(--text-alt);
+        font-size: 1.4rem;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:last-of-type {
+            margin-bottom: var(--xl);
+        }
+    }
+}
