@@ -1,0 +1,28 @@
+.header {
+    // background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--md);
+    padding-bottom: var(--md);
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 102.4rem;
+    z-index: 10;
+
+    // grid-column-start: 3;
+    // grid-column-end: 11;
+
+    &__logo {
+        width: auto;
+        height: var(--md);
+    }
+
+    &__nav {
+        // pendiente
+    }
+}

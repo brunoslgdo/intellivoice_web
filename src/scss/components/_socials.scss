@@ -1,31 +1,32 @@
 .socials {
-    list-style: none;
+    position: fixed;
+    right: calc(51.2rem + 50%);
+    bottom: var(--md);
+    // grid-column-start: 1;
+    // grid-column-end: 3;
+    z-index: 10;
 
+    &__menu {
+
+    }
+    
     &__item {
-        display: inline-block;
-        margin-right:  var(--xs);
+        list-style-type: none;
+        text-align: right;
+        margin-bottom: var(--xs);
 
-        @media only screen and (min-width: 768px) {
-
-            &:first-child {
-                display: none;
-            }
-        }
-
-        &:nth-child(1n + 2) {
-            display: none;
-            
-            @media only screen and (min-width: 768px) {
-                display: inline-block;
-            }
-        }
-
-        &:last-of-type {
-            margin-right: 0;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
+    &__link {
+        color: var(--first);
+        font-size: 1.4rem;
+        text-decoration: none;
+    }
+
     &__icon {
-        width: var(--xl);
+        width: var(--lg);
     }
 }

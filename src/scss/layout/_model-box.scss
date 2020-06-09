@@ -1,4 +1,11 @@
-.__wrap {
-    padding-right: var(--sm);
-    padding-left: var(--sm);
+.__column-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: var(--lg);
+    // background: yellow;
+
+    &.vh {
+        min-height: 100vh;
+    }
 }

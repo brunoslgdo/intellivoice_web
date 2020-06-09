@@ -1,0 +1,56 @@
+.uc {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr;
+    gap: var(--md);
+    // margin-top: auto;
+    // margin-bottom: auto;
+    width: 100vw;
+    
+    &__box {
+        
+        &:first-child {
+            grid-column-start: 3;
+            grid-column-end: 7;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        &:last-child {
+            grid-column-start: 7;
+            grid-column-end: 12;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            margin-top: auto;
+        }
+    }
+
+    &__display {
+        font-size: 6.4rem;
+        font-weight: normal;
+        line-height: 1;
+    }
+    
+    &__display-alt {
+        font-size: var(--xl);
+        font-weight: normal;
+    }
+
+    &__caption {
+        font-size: var(--xl);
+    }
+
+    &__text {
+        font-size: var(--md);
+    }
+
+    &__img {
+        max-width: 100%;
+    }
+
+    &--700 {
+        font-family: 'museo_sans700';
+    }
+}

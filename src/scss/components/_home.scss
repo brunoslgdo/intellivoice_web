@@ -1,0 +1,13 @@
+.home {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    text-align: center;
+    margin: auto;
+
+    &__display {
+        color: var(--text-alt);
+        font-family: 'museo_sans700';
+        font-size: 9.6rem;
+        text-shadow: 0 0 0.6rem rgba(0,0,0,0.8);
+    }
+}

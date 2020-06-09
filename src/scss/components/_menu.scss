@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+
+    &__item {
+        margin-bottom: var(--sm);
+        text-align: right;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        color: var(--text-alt);
+        font-size: 1.4rem;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
