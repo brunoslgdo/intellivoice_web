@@ -2,13 +2,7 @@
     position: fixed;
     right: calc(51.2rem + 50%);
     bottom: var(--md);
-    // grid-column-start: 1;
-    // grid-column-end: 3;
     z-index: 10;
-
-    &__menu {
-
-    }
     
     &__item {
         list-style-type: none;
