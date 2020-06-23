@@ -1,13 +1,28 @@
 .home {
-    grid-column-start: 3;
-    grid-column-end: 11;
-    text-align: center;
-    margin: auto;
+    background-image: url("#{$pathImg}bg.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
 
-    &__display {
-        color: var(--text-alt);
-        font-family: 'museo_sans700';
-        font-size: 9.6rem;
-        text-shadow: 0 0 0.6rem rgba(0,0,0,0.8);
+    &__title {
+        font-size: calc(var(--lg) + 1vw);
+        text-align: center;
+        margin: auto;
+
+        @media only screen and (min-width: 568px) {
+            font-size: calc(3.2rem + 3vw);
+        }
+        
+        @media only screen and (min-width: 736px) {
+            font-size: calc(3.2rem + 6vw);
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        margin-top: var(--md);
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
