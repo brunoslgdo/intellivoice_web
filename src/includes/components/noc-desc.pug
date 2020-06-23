@@ -1,0 +1,30 @@
+.noc-desc__child
+    h1.text--title.text--bold.text--first NOC-SOC IoT
+.noc-desc__child
+    p.text--emphasis Con NOC puedes prevenir <span class="text--first text--bold">problemas de infraestructura</span>
+.noc-desc__child
+    p.text--body.text--bold.text--first Algunos de los beneficios son:
+.noc-desc__child
+    each card in CARD_NOC 
+        .card.card--left
+            img(src=`${pathImg}${card.icon}`, class="card__icon")
+            p.text--body.text--second= `${card.text}`
+.noc-desc__child
+    p.text--emphasis.text--bold.text--first.text--mbottom El SOC está especializado en la detección y prevención de amenazas informáticas, <span class="text--second text--regular">así como ataques de software y hackers.</span>
+    p.text--body.text--bold.text--first Más funciones del SOC incluyen:
+.noc-desc__child
+    -
+        const CARD_SOC = [
+            {
+                text: 'Proteger la propiedad intelectual del usuario',
+                icon: 'icon-card-soc-01.svg',
+            },
+            {
+                text: 'Impedir robos de información',
+                icon: 'icon-card-soc-02.svg',
+            },
+        ]
+    each card in CARD_SOC 
+        .card.card--left
+            img(src=`${pathImg}${card.icon}`, class="card__icon")
+            p.text--body.text--second= `${card.text}`
