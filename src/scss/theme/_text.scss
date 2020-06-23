@@ -1,0 +1,51 @@
+.text {
+
+    &--display {
+        font-size: 6.4rem;
+    }
+    
+    &--title {
+        font-size: var(--lg);
+    }
+
+    &--title-alt {
+        font-size: var(--sm);
+    }
+
+    &--body {
+        font-size: var(--md);
+    }
+
+    &--emphasis {
+        font-size: var(--xl);
+    }
+    
+    &--bold {
+        font-family: 'museo_sans700';
+    }
+
+    &--light {
+        font-family: 'museo_sans100'
+    }
+    
+    &--first {
+        color: var(--first);
+    }
+
+    &--second {
+        color: var(--second);
+    }
+
+    &--alt {
+        color: var(--text-alt);
+    }
+
+    &--mbottom {
+        margin-bottom: var(--sm);
+    }
+
+    &--shadow {
+        text-shadow: 0 0 0.6rem rgba(0,0,0,0.8);
+    }
+
+}
