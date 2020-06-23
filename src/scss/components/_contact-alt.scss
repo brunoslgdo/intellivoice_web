@@ -1,16 +1,12 @@
 .contact-alt {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: center;
     display: grid;
     grid-template-columns: 3.2rem;
     grid-template-rows: repeat(3, 1fr);
     background-color: var(--first);
     padding: var(--md);
     position: fixed;
+    top: 0;
     right: 0;
-    // width: 12.8rem;
     height: 100%;
     z-index: 10;
     
@@ -19,6 +15,7 @@
         
         &:first-child {
             margin-bottom: auto;
+            height: 8.2rem;
         }
 
         &:nth-child(2) {
