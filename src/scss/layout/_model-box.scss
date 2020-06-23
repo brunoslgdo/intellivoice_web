@@ -1,11 +1,19 @@
-.__column-grid {
+.__description-grid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: auto;
     grid-template-rows: auto;
-    gap: var(--lg);
-    // background: yellow;
+    gap: var(--md);
+    padding: 8.2rem var(--sm);
 
     &.vh {
         min-height: 100vh;
     }
+        
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(12, 1fr);
+    }
+}
+
+.vh {
+    min-height: 100vh;
 }
