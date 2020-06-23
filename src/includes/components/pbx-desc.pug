@@ -1,0 +1,20 @@
+.pbx-desc__child
+    h1.text--title.text--bold.text--first IP PBX Cloud
+.pbx-desc__child
+    p.text--title Desde cualquier lugar,
+    p.text--title.text--bold.text--first ¡siempre estás conectado!
+.pbx-desc__child
+    p.text--body.text--mbottom No te quedes atrás y aprovecha, de una manera muy sencilla, todos los beneficios de la tecnología para seguir conectado y compartiendo contenido con todo tu equipo.
+    p.text--body.text--bold.text--first Algunos de los beneficios son:
+.pbx-desc__child
+    each card, key in CARD_PBX
+        if key % 2 == 0
+            .card.card--inside
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--alt= `${card.text}`
+        else
+            .card.card--inside.card--bgsecond
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--alt= `${card.text}`
+.pbx-desc__child
+    a(href="#contact", class="link link--first") Escríbenos y descubre cómo puedes evolucionar la comunicación en tu empresa
