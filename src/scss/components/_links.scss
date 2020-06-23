@@ -1,0 +1,16 @@
+.link {
+    color: var(--first);
+    font-family: 'museo_sans700';
+    font-size: var(--md);
+    text-decoration: none;
+    display: flex;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &::after {
+        content: url('#{imgPath}icon-next.svg');
+        margin-left: var(--sm);
+    }
+}
