@@ -1,20 +1,32 @@
 .menu {
-    display: flex;
+    display: none;
     flex-direction: column;
+    background-color: var(--first);
+    box-shadow: 0 0 0.2rem rgba(0,0,0,0.6);
+    border-radius: var(--ss);
     list-style-type: none;
+    padding: var(--md);
+    position: absolute;
+    right: 0;
 
     &__item {
         margin-bottom: var(--sm);
         text-align: right;
+        transition: opacity 0.3s ease-in-out;
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        &:hover {
+            opacity: 0.6;
         }
     }
 
     &__link {
         color: var(--text-alt);
-        font-size: 1.4rem;
+        font-family: 'museo_sans700';
+        font-size: var(--sm);
         text-decoration: none;
         text-transform: uppercase;
     }
