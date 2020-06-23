@@ -1,0 +1,17 @@
+.cc-desc__child
+    h1.text--title.text--bold.text--first Contact Center
+.cc-desc__child
+    p.text--body.text--second.text--mbottom Nuestro Contact Center te permite mantenerte conectado con la flexibilidad y costos que tú decidas.
+    p.text--body.text--bold.text--first Algunos de los beneficios son:
+.cc-desc__child
+    each card, key in CARD_CC
+        if key % 2 == 0
+            .card.card--outside.card--left
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--alt.card--bgsecond= `${card.text}`
+        else
+            .card.card--outside.card--left
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--alt.card--bgfirst= `${card.text}`
+.cc-desc__child
+    a(href="#contact", class="link link--first") Contesta este formulario y déjanos enseñarte cómo lograr la excelencia operacional.
