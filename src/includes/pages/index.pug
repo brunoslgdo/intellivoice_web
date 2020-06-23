@@ -1,6 +1,7 @@
 include ../config/conf_variables.pug
 include ../config/conf_menu.pug
 include ../config/conf_socials.pug
+include ../config/conf_cards.pug
 
 <!DOCTYPE html>
 html(lang="es")
@@ -8,31 +9,56 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Intellivoice
-        link(href="../css/fonts.css", rel="stylesheet")
-        link(href="../css/styles.css", rel="stylesheet")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css", rel="stylesheet")
+        link(href=`${pathStyles}fonts.css`, rel="stylesheet")
+        link(href=`${pathStyles}styles.css?=2117220607`, rel="stylesheet")
     body
 
         include ../components/header
         include ../components/socials
         include ../components/contact-alt
 
-        .__column-grid.vh.bg-home
-            include ../components/home
+        .home.vh
+            h1.home__title.text--alt.text--bold.text--shadow.animate__animated.animate__fadeInDown Comunicaciones<br><span class="text--light">eficientes</span>
+                a(href="#que-es"): img(src=`${pathImg}icon-down.svg`, class="home__icon", alt="siguiente sección")
+
+        .que-es.__description-grid#que-es
+            .que-es__child
+            .que-es__child
+                h1.que-es__title.text--bold ¿Qué es Intellivoice?
+            .que-es__child
+                p.text--body.text--mbottom <span class="text--bold">Implementamos tecnologías integrales de comunicación unificadas,</span> utilizando los más avanzados desarrollos en hardware, software y servicios en la nube.
+                p.que-es__text Esto para que nuestros clientes experimenten mayor productividad, mediante una combinación de dispositivos, servicios y tecnologías, incluyendo <span class="text--first text--bold">presencia, movilidad, colaboración, conferencias de voz y video, mensajería, entre otras.</span>
         
-        .__column-grid.vh
-            include ../components/que-es
+        .pbx.__description-grid#pbx
+            include ../components/pbx
         
-        .__column-grid.vh.bg-uc
+        .pbx-desc.__description-grid#pbx-desc
+            include ../components/pbx-desc
+        
+        .uc.__description-grid#uc
             include ../components/uc
+
+        .uc-desc.__description-grid.bg-second#uc-desc
+            include ../components/uc-desc
         
-        .__column-grid.vh.bg-cs
+        .cs.__description-grid#cs
             include ../components/cs
+
+        .cc-desc.__description-grid#cs-desc
+            include ../components/cs-desc
         
-        .__column-grid.vh
+        .cc.__description-grid#cc
             include ../components/cc
+
+        .cc-desc.__description-grid#cc-desc
+            include ../components/cc-desc
         
-        .__column-grid.vh
+        .noc.__description-grid#noc
             include ../components/noc
         
-        .__column-grid.vh.bg-free
-            include ../components/free
+        .noc-desc.__description-grid#noc-desc
+            include ../components/noc-desc
+        
+        .contact.__description-grid#contact
+            include ../components/contact
