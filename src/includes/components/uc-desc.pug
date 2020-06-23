@@ -1,0 +1,19 @@
+.uc-desc__child
+    h1.text--title.text--bold.text--first Unified<br><span class="text--title-alt text--bold">Communications</span>
+.uc-desc__child
+    p.text--body.text--alt.text--mbottom La innovación ahora es sencilla y económica.
+    p.text--body.text--alt Aprovecha todos los beneficios de un sistema IP PBX sin tener que preocuparte por su excesivo precio y constante mantenimiento.
+.uc-desc__child
+    p.text--body.text--bold.text--first Algunos de los beneficios son:
+.uc-desc__child
+    each card, key in CARD_UC
+        if key % 2 == 0
+            .card.card--outside
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--bgfirst= `${card.text}`
+        else
+            .card.card--outside.card--left
+                img(src=`${pathImg}${card.icon}`, class="card__icon")
+                p.card__text.card--bgalt= `${card.text}`
+.uc-desc__child
+    a(href="#contact", class="link link--first") Escríbenos y recibe sin costo un análisis sobre cómo puedes evolucionar la comunicación en tu empresa.
