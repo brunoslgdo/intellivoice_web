@@ -1,56 +1,74 @@
 .uc {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    gap: var(--md);
-    // margin-top: auto;
-    // margin-bottom: auto;
-    width: 100vw;
-    
-    &__box {
+    background-color: var(--second);
         
-        &:first-child {
-            grid-column-start: 3;
-            grid-column-end: 7;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            margin-top: auto;
-            margin-bottom: auto;
+    &__child {
+        
+        @media only screen and (min-width: 667px) {
+
+            &:nth-child(1) {
+                grid-column-start: 2;
+                grid-column-end: 12;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            
+            &:nth-child(2) {
+                grid-column-start: 7;
+                grid-column-end: 12;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+            
+            &:nth-child(3) {
+                grid-column-start: 2;
+                grid-column-end: 7;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            &:last-child {
+                grid-column-start: 2;
+                grid-column-end: 11;
+                grid-row-start: 3;
+                grid-row-end: 4;
+            }
         }
+        
+        @media only screen and (min-width: 1024px) {
 
-        &:last-child {
-            grid-column-start: 7;
-            grid-column-end: 12;
-            grid-row-start: 1;
-            grid-row-end: 2;
-            margin-top: auto;
+            &:nth-child(1) {
+                grid-column-start: 2;
+                grid-column-end: 8;
+                grid-row-start: 1;
+                grid-row-end: 2;
+            }
+            
+            &:nth-child(2) {
+                grid-column-start: 8;
+                grid-column-end: 12;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                margin-top: auto;
+            }
+            
+            &:nth-child(3) {
+                grid-column-start: 2;
+                grid-column-end: 8;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
+
+            &:last-child {
+                grid-column-start: 8;
+                grid-column-end: 12;
+                grid-row-start: 2;
+                grid-row-end: 3;
+            }
         }
-    }
-
-    &__display {
-        font-size: 6.4rem;
-        font-weight: normal;
-        line-height: 1;
-    }
-    
-    &__display-alt {
-        font-size: var(--xl);
-        font-weight: normal;
-    }
-
-    &__caption {
-        font-size: var(--xl);
-    }
-
-    &__text {
-        font-size: var(--md);
     }
 
     &__img {
+        width: auto;
         max-width: 100%;
-    }
-
-    &--700 {
-        font-family: 'museo_sans700';
     }
 }
