@@ -1,0 +1,20 @@
+.cs-desc__child
+    h1.text--title.text--bold.text--first Carrier Services
+.cs-desc__child
+    p.text--body.text--second.text--mbottom La brecha generacional ya no es excusa para no tener los mejores sistemas de comunicación, porque ahora la tecnología IPPBX es muy intuitiva y fácil de usar.
+.cs-desc__child
+    p.text--body.text--bold.text--first Algunos de los beneficios son:
+.cs-desc__child
+    each card, key in CARD_CS
+        if key % 2 == 0
+            .cardv
+                .cardv__img.card--bgfirst
+                    img(src=`${pathImg}${card.icon}`, class="cardv__icon")
+                p.card__text= `${card.text}`
+        else
+            .cardv
+                .cardv__img.card--bgsecond
+                    img(src=`${pathImg}${card.icon}`, class="cardv__icon")
+                p.card__text= `${card.text}`
+.cs-desc__child
+    a(href="#contact", class="link link--first") Escríbenos y recibe sin costo un análisis sobre cómo puedes evolucionar la comunicación en tu empresa.
