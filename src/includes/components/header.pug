@@ -1,4 +1,9 @@
-header.header
-    img(src=`${imgPath}logo-intellivoice.svg`, class="header__logo", alt="intellivoice")
-    nav.header__nav
-        include hamburguer
+header.header.animate__animated.animate__fadeInDown
+    .header__child
+        picture
+            source(srcset=`${pathImg}logo-intellivoice.svg`, class="header__logo", media="(min-width: 1024px)")
+            source(srcset=`${pathImg}logo-intellivoice-alt.svg`, class="header__logo", media="(min-width: 320px)")
+            img(src=`${pathImg}logo-intellivoice.svg`, class="header__logo", alt="intellivoice")    
+        nav.header__nav
+            include hamburguer
+            include menu
