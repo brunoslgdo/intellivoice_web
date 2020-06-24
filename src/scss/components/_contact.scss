@@ -45,14 +45,6 @@
         }
     }
 
-    &__text {
-        font-size: var(--xl);
-
-        @media only screen and (min-width: 375px) {
-            font-size: calc(var(--xl) + 3vw);
-        }
-    }
-
     &__img {
         max-width: 100%;
         height: auto;
