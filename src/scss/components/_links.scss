@@ -1,7 +1,8 @@
 .link {
     color: var(--first);
     font-family: 'museo_sans700';
-    font-size: var(--md);
+    // font-size: var(--md);
+    @extend .text--body;
     text-decoration: none;
     display: flex;
 
@@ -10,7 +11,7 @@
     }
 
     &::after {
-        content: url('#{imgPath}icon-next.svg');
+        content: url("#{$pathImg}icon-next.svg");
         margin-left: var(--sm);
     }
 }
